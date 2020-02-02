@@ -42,19 +42,25 @@ class QuoteForm extends Component {
                     <label htmlFor="content" className="col-md-4 control-label">Quote</label>
                     <div className="col-md-5">
                       <textarea
+                        onChange={this.handleOnChange}
+                        name= "content"
                         className="form-control"
                         value={this.state.content}
                       />
+
                     </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="author" className="col-md-4 control-label">Author</label>
                     <div className="col-md-5">
                       <input
+                        onChange={this.handleOnChange}
+                        name= "author"
                         className="form-control"
                         type="text"
                         value={this.state.author}
                       />
+
                     </div>
                   </div>
                   <div className="form-group">
@@ -73,4 +79,4 @@ class QuoteForm extends Component {
 }
 
 //add arguments to connect as needed
-export default connect()(QuoteForm);
+export default connect(null, {addQuote})(QuoteForm);
