@@ -17,7 +17,7 @@ class App extends Component {
          */}
          <QuoteForm />
          <Quotes />
-         
+
       </div>
     );
   }
